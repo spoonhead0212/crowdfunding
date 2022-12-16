@@ -488,7 +488,7 @@ main {
     }
 
     :is(.success-modal, .start, .progressive, .master, .about) {
-        width: 80%;
+        width: 85%;
     }
 
     .master {
