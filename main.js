@@ -7,15 +7,14 @@ menuIcon.addEventListener("click", () => {
     menuList.classList.toggle('mobile-menu');
 
 // change menu icon on click
-    if (menuIcon.src.match = ("images/icon-hamburger.svg")) {
-        menuIcon.src = "images/icon-close-menu.svg";
-        console.log("switch");
-    } else {
-        menuIcon.src = "images/icon-hamburger.svg";
-        console.log('switch back');
-    }
+if(menuIcon.src.match("images/icon-hamburger.svg")){
+    menuIcon.src = "images/icon-close-menu.svg";
+    console.log("hamburger");
+} else {
+    menuIcon.src = "images/icon-hamburger.svg";
+    console.log("cancel");
+}
 })
-
 
 
 
