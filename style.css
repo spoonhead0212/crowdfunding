@@ -34,6 +34,7 @@ body {
 main {
     background-color: var(--darker-white);
     padding-bottom: 5rem;
+    position: relative;
 }
 
 .heading {
@@ -271,6 +272,7 @@ main {
 .pledge-box-i {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-top: 1rem;
 }
 
@@ -289,20 +291,12 @@ main {
     align-self: center;
 }
 
-.modal-start {
-    padding-top: 3rem;
-}
-
-.start::backdrop {
-    background-color: rgba(0, 0, 0, 0.4);
-}
-
 .start {
-    margin-top: 5rem;
+    /* display: block; */
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    position: relative;
+    transform: translate(-50%, -50%); 
+    position: absolute;
     background-color: var(--white);
     width: 60%;
     border: none;
@@ -310,9 +304,8 @@ main {
     border-radius: 8px;
 }
 
-.start::-webkit-scrollbar {
-    display: none;
-    overflow: scroll;
+.start::backdrop {
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .start img {
@@ -325,7 +318,6 @@ main {
 .start h4 {
     font-weight: var(--weight-700);
     font-size: clamp(15px, 3vw, 20px);
-    /* font-size: 5px; */
     line-height: 2;
 }
 
@@ -334,7 +326,7 @@ main {
     gap: 1rem;
     border: var(--Dark-gray) 1px solid;
     border-radius: 5px;
-    padding: 1.5rem;
+    padding: 1rem;
     margin-top: 1rem;
 }
 
@@ -349,7 +341,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 13px;
+    /* margin-bottom: 13px; */
 }
 
 .ple {
@@ -366,7 +358,7 @@ main {
 }
 
 .inner-content p {
-    font-size: 14px;
+    font-size: 12px; /*i dey come*/
     color: var(--Dark-gray);
     line-height: 1.5;
 }
@@ -376,9 +368,14 @@ main {
     display: none;
 }
 
-.radio-btn:checked + .radio-label::after {
+.radio-check:checked + .radio-label::after {
     opacity: 1;
     transition: opacity 400ms ease-in-out;
+}
+
+.start-inner:hover {
+    border: 2px solid var(--Moderate-cyan);
+    cursor: pointer;
 }
 
 .radio-label {
@@ -513,6 +510,10 @@ main {
     }
     .heading {
         background-image: url(images/image-hero-mobile.jpg);
+    }
+
+    .pledge {
+        padding-inline: 1rem;
     }
 
     .pledge-box {
